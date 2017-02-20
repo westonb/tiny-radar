@@ -1120,7 +1120,7 @@ Wire Wire Line
 Wire Wire Line
 	3750 6300 3750 6350
 Wire Wire Line
-	1450 6750 1550 6750
+	1050 6750 1550 6750
 Wire Wire Line
 	1500 7200 1500 7150
 Wire Wire Line
@@ -1165,8 +1165,6 @@ Wire Wire Line
 Wire Wire Line
 	1800 6200 1800 6150
 Connection ~ 1500 6200
-Wire Wire Line
-	1150 6750 1050 6750
 Wire Wire Line
 	6150 6150 6350 6150
 Wire Wire Line

@@ -916,4 +916,12 @@ Wire Wire Line
 	9300 4300 9300 4500
 Wire Wire Line
 	9300 4800 9300 4900
+Wire Wire Line
+	3400 2600 3300 2600
+Wire Wire Line
+	3400 2800 3300 2800
+Text Label 3300 2600 2    60   ~ 0
+STATUS_2
+Text Label 3300 2800 2    60   ~ 0
+STATUS_1
 $EndSCHEMATC
