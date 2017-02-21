@@ -159,17 +159,6 @@ F 3 "" H 3550 4950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT_TRIM RV301
-U 1 1 58AB4262
-P 2550 6300
-F 0 "RV301" V 2350 6300 50  0000 C CNN
-F 1 "POT_TRIM" V 2450 6300 50  0000 C CNN
-F 2 "wbraun_smd:22A-Trimmer" H 2550 6300 50  0001 C CNN
-F 3 "" H 2550 6300 50  0000 C CNN
-	1    2550 6300
-	-1   0    0    -1  
-$EndComp
-$Comp
 L R R303
 U 1 1 58AB4484
 P 2550 6650
@@ -183,10 +172,6 @@ $EndComp
 Wire Wire Line
 	2550 6100 2550 6150
 Wire Wire Line
-	2400 6300 2400 6450
-Wire Wire Line
-	2400 6450 2550 6450
-Wire Wire Line
 	2550 6450 2550 6500
 Wire Wire Line
 	3800 5150 3700 5150
@@ -198,9 +183,9 @@ Text Label 3700 5250 2    60   ~ 0
 RG2
 Wire Wire Line
 	2550 6800 2550 6850
-Text Label 2550 6100 0    60   ~ 0
-RG1
 Text Label 2550 6850 0    60   ~ 0
+RG1
+Text Label 2550 6100 0    60   ~ 0
 RG2
 $Comp
 L R R305
@@ -293,9 +278,9 @@ Wire Wire Line
 	2900 4950 2800 4950
 Wire Wire Line
 	2900 5450 2800 5450
-Text HLabel 2800 4950 0    60   Input ~ 0
-IF+
 Text HLabel 2800 5450 0    60   Input ~ 0
+IF+
+Text HLabel 2800 4950 0    60   Input ~ 0
 IF-
 Wire Wire Line
 	3200 4950 3800 4950
@@ -399,10 +384,6 @@ Wire Wire Line
 	6400 4450 6400 4350
 Wire Wire Line
 	6400 4350 6550 4350
-Text Label 6550 4350 0    60   ~ 0
-VDD/2
-Text Label 6100 5850 2    60   ~ 0
-VDD/2
 Wire Wire Line
 	7050 5100 7050 5000
 Wire Wire Line
@@ -847,4 +828,23 @@ Wire Wire Line
 Connection ~ 2000 1200
 Text Label 2200 1200 0    60   ~ 0
 VDDA
+$Comp
+L POT_TRIM RV301
+U 1 1 58AB4262
+P 2550 6300
+F 0 "RV301" V 2350 6300 50  0000 C CNN
+F 1 "POT_TRIM" V 2450 6300 50  0000 C CNN
+F 2 "wbraun_smd:22A-Trimmer" H 2550 6300 50  0001 C CNN
+F 3 "" H 2550 6300 50  0000 C CNN
+	1    2550 6300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 6300 2400 6450
+Wire Wire Line
+	2400 6450 2550 6450
+Text Label 6550 4350 0    60   ~ 0
+VDDA/2
+Text Label 6100 5850 2    60   ~ 0
+VDDA/2
 $EndSCHEMATC

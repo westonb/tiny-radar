@@ -311,7 +311,7 @@ F 3 "" H 3350 4200 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Text Label 3350 4100 2    60   ~ 0
-VDDA
+VDDA2
 $Comp
 L FILTER FB201
 U 1 1 58AAFE47
@@ -423,10 +423,10 @@ F 3 "" H 2000 4250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 2300 3750 0    60   ~ 0
-VDDA
+VDDA2
 Text Notes 1450 5250 0    60   ~ 0
 VDD Decoupling
-Text Label 5300 2300 0    60   ~ 0
+Text Label 3300 2300 2    60   ~ 0
 RF_ENABLE
 Text Label 6900 3400 2    60   ~ 0
 ADC_1
@@ -720,7 +720,7 @@ Wire Wire Line
 	2250 3750 2300 3750
 Connection ~ 2250 3800
 Wire Wire Line
-	5200 2300 5300 2300
+	3400 2300 3300 2300
 Wire Wire Line
 	6900 3400 7300 3400
 Wire Wire Line
