@@ -384,10 +384,6 @@ Wire Wire Line
 	6400 4450 6400 4350
 Wire Wire Line
 	6400 4350 6550 4350
-Text Label 6550 4350 0    60   ~ 0
-VDD/2
-Text Label 6100 5850 2    60   ~ 0
-VDD/2
 Wire Wire Line
 	7050 5100 7050 5000
 Wire Wire Line
@@ -847,4 +843,8 @@ Wire Wire Line
 	2400 6300 2400 6450
 Wire Wire Line
 	2400 6450 2550 6450
+Text Label 6550 4350 0    60   ~ 0
+VDDA/2
+Text Label 6100 5850 2    60   ~ 0
+VDDA/2
 $EndSCHEMATC
