@@ -1,0 +1,12 @@
+#configuration file for board with STM32L4xx using STlink v2.1
+
+gdb_port 3333
+
+source [find interface/stlink-v2.cfg]
+
+transport select hla_swd
+
+source [find target/stm32l4x.cfg]
+
+reset_config none separate
+
