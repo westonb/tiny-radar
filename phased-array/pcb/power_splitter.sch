@@ -1,0 +1,222 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:wbraun_ic_lib
+LIBS:phased-array-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PD2328J U401
+U 1 1 58E46E79
+P 3300 2400
+F 0 "U401" H 3050 2750 60  0000 C CNN
+F 1 "PD2328J" H 3200 2050 60  0000 C CNN
+F 2 "wbraun_smd:PD2328" H 2750 2950 60  0001 C CNN
+F 3 "" H 2750 2950 60  0001 C CNN
+	1    3300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L PD2328J U402
+U 1 1 58E46F0C
+P 4800 1800
+F 0 "U402" H 4550 2150 60  0000 C CNN
+F 1 "PD2328J" H 4700 1450 60  0000 C CNN
+F 2 "wbraun_smd:PD2328" H 4250 2350 60  0001 C CNN
+F 3 "" H 4250 2350 60  0001 C CNN
+	1    4800 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L PD2328J U403
+U 1 1 58E46F7F
+P 5000 3100
+F 0 "U403" H 4750 3450 60  0000 C CNN
+F 1 "PD2328J" H 4900 2750 60  0000 C CNN
+F 2 "wbraun_smd:PD2328" H 4450 3650 60  0001 C CNN
+F 3 "" H 4450 3650 60  0001 C CNN
+	1    5000 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R401
+U 1 1 58E46FCA
+P 4000 2400
+F 0 "R401" V 4080 2400 50  0000 C CNN
+F 1 "100" V 4000 2400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 3930 2400 50  0001 C CNN
+F 3 "" H 4000 2400 50  0001 C CNN
+	1    4000 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R403
+U 1 1 58E47053
+P 5700 3100
+F 0 "R403" V 5780 3100 50  0000 C CNN
+F 1 "100" V 5700 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5630 3100 50  0001 C CNN
+F 3 "" H 5700 3100 50  0001 C CNN
+	1    5700 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R402
+U 1 1 58E470C8
+P 5500 1800
+F 0 "R402" V 5580 1800 50  0000 C CNN
+F 1 "100" V 5500 1800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" V 5430 1800 50  0001 C CNN
+F 3 "" H 5500 1800 50  0001 C CNN
+	1    5500 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2200 4000 2200
+Wire Wire Line
+	4000 1600 4000 2250
+Wire Wire Line
+	3800 2600 4000 2600
+Wire Wire Line
+	4000 2550 4000 2900
+Wire Wire Line
+	5500 2900 5900 2900
+Wire Wire Line
+	5700 2900 5700 2950
+Wire Wire Line
+	5500 3300 5900 3300
+Wire Wire Line
+	5700 3300 5700 3250
+Wire Wire Line
+	5300 1600 5700 1600
+Wire Wire Line
+	5500 1600 5500 1650
+Wire Wire Line
+	5300 2000 5700 2000
+Wire Wire Line
+	5500 2000 5500 1950
+Wire Wire Line
+	4000 2900 4500 2900
+Connection ~ 4000 2200
+Wire Wire Line
+	4000 1600 4300 1600
+Connection ~ 4000 2600
+$Comp
+L GND #PWR036
+U 1 1 58E4719C
+P 4400 3400
+F 0 "#PWR036" H 4400 3150 50  0001 C CNN
+F 1 "GND" H 4400 3250 50  0000 C CNN
+F 2 "" H 4400 3400 50  0001 C CNN
+F 3 "" H 4400 3400 50  0001 C CNN
+	1    4400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR037
+U 1 1 58E471BC
+P 4200 2100
+F 0 "#PWR037" H 4200 1850 50  0001 C CNN
+F 1 "GND" H 4200 1950 50  0000 C CNN
+F 2 "" H 4200 2100 50  0001 C CNN
+F 3 "" H 4200 2100 50  0001 C CNN
+	1    4200 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR038
+U 1 1 58E471DC
+P 2700 2700
+F 0 "#PWR038" H 2700 2450 50  0001 C CNN
+F 1 "GND" H 2700 2550 50  0000 C CNN
+F 2 "" H 2700 2700 50  0001 C CNN
+F 3 "" H 2700 2700 50  0001 C CNN
+	1    2700 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2400 2700 2400
+Wire Wire Line
+	2700 2400 2700 2700
+Wire Wire Line
+	2800 2500 2700 2500
+Connection ~ 2700 2500
+Wire Wire Line
+	2800 2600 2700 2600
+Connection ~ 2700 2600
+Wire Wire Line
+	4500 3100 4400 3100
+Wire Wire Line
+	4400 3100 4400 3400
+Wire Wire Line
+	4500 3200 4400 3200
+Connection ~ 4400 3200
+Wire Wire Line
+	4500 3300 4400 3300
+Connection ~ 4400 3300
+Wire Wire Line
+	4300 1800 4200 1800
+Wire Wire Line
+	4200 1800 4200 2100
+Wire Wire Line
+	4300 1900 4200 1900
+Connection ~ 4200 1900
+Wire Wire Line
+	4300 2000 4200 2000
+Connection ~ 4200 2000
+Wire Wire Line
+	2800 2200 2600 2200
+Connection ~ 5700 2900
+Connection ~ 5700 3300
+Connection ~ 5500 1600
+Connection ~ 5500 2000
+Text HLabel 5900 3300 2    60   Input ~ 0
+RF1
+Text HLabel 5900 2900 2    60   Input ~ 0
+RF2
+Text HLabel 5700 2000 2    60   Input ~ 0
+RF3
+Text HLabel 5700 1600 2    60   Input ~ 0
+RF4
+Text HLabel 2600 2200 0    60   Input ~ 0
+RF_IN
+$EndSCHEMATC

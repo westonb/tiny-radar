@@ -1,0 +1,381 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:wbraun_ic_lib
+LIBS:phased-array-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1200 900  1200 1350
+U 58E45D37
+F0 "phase shifter 1" 60
+F1 "phase-shifter1.sch" 60
+F2 "RF_IN" I R 2400 1100 60 
+F3 "RF_OUT" I R 2400 1200 60 
+F4 "SDA" I R 2400 1400 60 
+F5 "SCL" I R 2400 1500 60 
+$EndSheet
+$Sheet
+S 1200 2600 1200 1200
+U 58E46C25
+F0 "phase shifter 2" 60
+F1 "phase-shifter2.sch" 60
+F2 "RF_IN" I R 2400 2800 60 
+F3 "RF_OUT" I R 2400 2900 60 
+F4 "SDA" I R 2400 3100 60 
+F5 "SCL" I R 2400 3200 60 
+$EndSheet
+$Sheet
+S 4200 1900 1200 1300
+U 58E46E64
+F0 "power splitter" 60
+F1 "power_splitter.sch" 60
+F2 "RF1" I R 5400 2300 60 
+F3 "RF2" I R 5400 2400 60 
+F4 "RF3" I R 5400 2500 60 
+F5 "RF4" I R 5400 2600 60 
+F6 "RF_IN" I R 5400 2100 60 
+$EndSheet
+$Sheet
+S 1200 4200 1200 1200
+U 58E4768E
+F0 "phase shifter 3" 60
+F1 "phase_shifter_3sch.sch" 60
+F2 "RF_IN" I R 2400 4400 60 
+F3 "RF_OUT" I R 2400 4500 60 
+F4 "SDA" I R 2400 4700 60 
+F5 "SCL" I R 2400 4800 60 
+$EndSheet
+$Sheet
+S 1200 5700 1250 1200
+U 58E478EF
+F0 "phase shifter 4" 60
+F1 "phase_shifter_4.sch" 60
+F2 "RF_IN" I R 2450 5900 60 
+F3 "RF_OUT" I R 2450 6000 60 
+F4 "SDA" I R 2450 6300 60 
+F5 "SCL" I R 2450 6400 60 
+$EndSheet
+$Comp
+L CONN_01X02 J101
+U 1 1 58E56674
+P 4700 4650
+F 0 "J101" H 4700 4800 50  0000 C CNN
+F 1 "CONN_01X02" V 4800 4650 50  0000 C CNN
+F 2 "wbraun_smd:SMA-Edge-China-Short" H 4700 4650 50  0001 C CNN
+F 3 "" H 4700 4650 50  0001 C CNN
+	1    4700 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 58E568A0
+P 4400 4800
+F 0 "#PWR01" H 4400 4550 50  0001 C CNN
+F 1 "GND" H 4400 4650 50  0000 C CNN
+F 2 "" H 4400 4800 50  0001 C CNN
+F 3 "" H 4400 4800 50  0001 C CNN
+	1    4400 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4800 4400 4700
+Wire Wire Line
+	4400 4700 4500 4700
+Wire Wire Line
+	4500 4600 4400 4600
+$Comp
+L CONN_01X02 J102
+U 1 1 58E56A61
+P 4700 5150
+F 0 "J102" H 4700 5300 50  0000 C CNN
+F 1 "CONN_01X02" V 4800 5150 50  0000 C CNN
+F 2 "wbraun_smd:SMA-Edge-China-Short" H 4700 5150 50  0001 C CNN
+F 3 "" H 4700 5150 50  0001 C CNN
+	1    4700 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 58E56A67
+P 4400 5300
+F 0 "#PWR02" H 4400 5050 50  0001 C CNN
+F 1 "GND" H 4400 5150 50  0000 C CNN
+F 2 "" H 4400 5300 50  0001 C CNN
+F 3 "" H 4400 5300 50  0001 C CNN
+	1    4400 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 5300 4400 5200
+Wire Wire Line
+	4400 5200 4500 5200
+Wire Wire Line
+	4500 5100 4400 5100
+$Comp
+L CONN_01X02 J103
+U 1 1 58E56BFB
+P 4700 5650
+F 0 "J103" H 4700 5800 50  0000 C CNN
+F 1 "CONN_01X02" V 4800 5650 50  0000 C CNN
+F 2 "wbraun_smd:SMA-Edge-China-Short" H 4700 5650 50  0001 C CNN
+F 3 "" H 4700 5650 50  0001 C CNN
+	1    4700 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 58E56C01
+P 4400 5800
+F 0 "#PWR03" H 4400 5550 50  0001 C CNN
+F 1 "GND" H 4400 5650 50  0000 C CNN
+F 2 "" H 4400 5800 50  0001 C CNN
+F 3 "" H 4400 5800 50  0001 C CNN
+	1    4400 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 5800 4400 5700
+Wire Wire Line
+	4400 5700 4500 5700
+Wire Wire Line
+	4500 5600 4400 5600
+$Comp
+L CONN_01X02 J104
+U 1 1 58E56C0A
+P 4700 6150
+F 0 "J104" H 4700 6300 50  0000 C CNN
+F 1 "CONN_01X02" V 4800 6150 50  0000 C CNN
+F 2 "wbraun_smd:SMA-Edge-China-Short" H 4700 6150 50  0001 C CNN
+F 3 "" H 4700 6150 50  0001 C CNN
+	1    4700 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 58E56C10
+P 4400 6300
+F 0 "#PWR04" H 4400 6050 50  0001 C CNN
+F 1 "GND" H 4400 6150 50  0000 C CNN
+F 2 "" H 4400 6300 50  0001 C CNN
+F 3 "" H 4400 6300 50  0001 C CNN
+	1    4400 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 6300 4400 6200
+Wire Wire Line
+	4400 6200 4500 6200
+Wire Wire Line
+	4500 6100 4400 6100
+$Comp
+L CONN_01X02 J105
+U 1 1 58E56D04
+P 4700 6650
+F 0 "J105" H 4700 6800 50  0000 C CNN
+F 1 "CONN_01X02" V 4800 6650 50  0000 C CNN
+F 2 "wbraun_smd:SMA-Edge-China-Short" H 4700 6650 50  0001 C CNN
+F 3 "" H 4700 6650 50  0001 C CNN
+	1    4700 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 58E56D0A
+P 4400 6800
+F 0 "#PWR05" H 4400 6550 50  0001 C CNN
+F 1 "GND" H 4400 6650 50  0000 C CNN
+F 2 "" H 4400 6800 50  0001 C CNN
+F 3 "" H 4400 6800 50  0001 C CNN
+	1    4400 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 6800 4400 6700
+Wire Wire Line
+	4400 6700 4500 6700
+Wire Wire Line
+	4500 6600 4400 6600
+$Comp
+L CONN_01X04 J106
+U 1 1 58E56D59
+P 7000 4450
+F 0 "J106" H 7000 4700 50  0000 C CNN
+F 1 "CONN_01X04" V 7100 4450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 7000 4450 50  0001 C CNN
+F 3 "" H 7000 4450 50  0001 C CNN
+	1    7000 4450
+	1    0    0    -1  
+$EndComp
+Text Label 4400 4600 2    60   ~ 0
+RF_IN
+Text Label 4400 5100 2    60   ~ 0
+RF_OUT_1
+Text Label 4400 5600 2    60   ~ 0
+RF_OUT_2
+Text Label 4400 6100 2    60   ~ 0
+RF_OUT_3
+Text Label 4400 6600 2    60   ~ 0
+RF_OUT_4
+Wire Wire Line
+	2400 1100 2600 1100
+Wire Wire Line
+	2400 1200 2600 1200
+Wire Wire Line
+	2400 2800 2600 2800
+Wire Wire Line
+	2400 2900 2600 2900
+Wire Wire Line
+	2400 3100 2600 3100
+Wire Wire Line
+	2400 3200 2600 3200
+Wire Wire Line
+	2400 1400 2600 1400
+Wire Wire Line
+	2400 1500 2600 1500
+Wire Wire Line
+	2400 4400 2600 4400
+Wire Wire Line
+	2400 4500 2600 4500
+Wire Wire Line
+	2400 4700 2600 4700
+Wire Wire Line
+	2400 4800 2600 4800
+Wire Wire Line
+	2450 5900 2600 5900
+Wire Wire Line
+	2450 6000 2600 6000
+Wire Wire Line
+	2450 6300 2600 6300
+Wire Wire Line
+	2450 6400 2600 6400
+Wire Wire Line
+	5400 2100 5600 2100
+Wire Wire Line
+	5400 2300 5600 2300
+Wire Wire Line
+	5400 2400 5600 2400
+Wire Wire Line
+	5400 2500 5600 2500
+Wire Wire Line
+	5400 2600 5600 2600
+Text Label 5600 2100 0    60   ~ 0
+RF_IN
+Text Label 2600 1200 0    60   ~ 0
+RF_OUT_1
+Text Label 2600 2900 0    60   ~ 0
+RF_OUT_2
+Text Label 2600 4500 0    60   ~ 0
+RF_OUT_3
+Text Label 2600 6000 0    60   ~ 0
+RF_OUT_4
+Text Label 5600 2300 0    60   ~ 0
+RF_1
+Text Label 5600 2400 0    60   ~ 0
+RF_2
+Text Label 5600 2500 0    60   ~ 0
+RF_3
+Text Label 5600 2600 0    60   ~ 0
+RF_4
+Text Label 2600 1100 0    60   ~ 0
+RF_1
+Text Label 2600 2800 0    60   ~ 0
+RF_2
+Text Label 2600 4400 0    60   ~ 0
+RF_3
+Text Label 2600 5900 0    60   ~ 0
+RF_4
+Text Label 2600 1400 0    60   ~ 0
+SDA
+Text Label 2600 1500 0    60   ~ 0
+SCL
+Text Label 2600 3100 0    60   ~ 0
+SDA
+Text Label 2600 4700 0    60   ~ 0
+SDA
+Text Label 2600 6300 0    60   ~ 0
+SDA
+Text Label 2600 3200 0    60   ~ 0
+SCL
+Text Label 2600 4800 0    60   ~ 0
+SCL
+Text Label 2600 6400 0    60   ~ 0
+SCL
+Wire Wire Line
+	6800 4300 6700 4300
+Wire Wire Line
+	6700 4300 6700 4200
+Wire Wire Line
+	6800 4600 6700 4600
+Wire Wire Line
+	6700 4600 6700 4700
+Wire Wire Line
+	6800 4500 6700 4500
+Wire Wire Line
+	6800 4400 6700 4400
+$Comp
+L +3V3 #PWR06
+U 1 1 58E58C63
+P 6700 4200
+F 0 "#PWR06" H 6700 4050 50  0001 C CNN
+F 1 "+3V3" H 6700 4340 50  0000 C CNN
+F 2 "" H 6700 4200 50  0001 C CNN
+F 3 "" H 6700 4200 50  0001 C CNN
+	1    6700 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 58E58D01
+P 6700 4700
+F 0 "#PWR07" H 6700 4450 50  0001 C CNN
+F 1 "GND" H 6700 4550 50  0000 C CNN
+F 2 "" H 6700 4700 50  0001 C CNN
+F 3 "" H 6700 4700 50  0001 C CNN
+	1    6700 4700
+	1    0    0    -1  
+$EndComp
+Text Label 6700 4400 2    60   ~ 0
+SCL
+Text Label 6700 4500 2    60   ~ 0
+SDA
+$EndSCHEMATC
