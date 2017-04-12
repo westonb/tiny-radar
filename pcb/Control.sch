@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:tiny-radar-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -44,9 +45,11 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L USB_OTG P201
+L USB_OTG-RESCUE-tiny-radar P201
 U 1 1 58AAD76F
 P 850 1350
+AR Path="/58AAD76F" Ref="P201"  Part="1" 
+AR Path="/58AA0025/58AAD76F" Ref="P201"  Part="1" 
 F 0 "P201" H 1175 1225 50  0000 C CNN
 F 1 "USB_OTG" H 850 1550 50  0000 C CNN
 F 2 "Connect:USB_Micro-B_10103594-0001LF" V 800 1250 50  0001 C CNN
@@ -670,7 +673,7 @@ Text Label 7800 2550 2    60   ~ 0
 IF_N
 Text Label 5550 3700 0    60   ~ 0
 VCO_DAC
-Text Label 5550 3800 0    60   ~ 0
+Text Label 5600 3600 0    60   ~ 0
 AGC_DAC
 Text Label 5550 3400 0    60   ~ 0
 RAMP_ADC
@@ -762,7 +765,7 @@ F 3 "" H 2300 5400 50  0000 C CNN
 	1    2300 5400
 	1    0    0    -1  
 $EndComp
-Text Label 5600 3600 0    60   ~ 0
+Text Label 5550 3800 0    60   ~ 0
 STATUS_1
 Text Label 5600 3900 0    60   ~ 0
 STATUS_2

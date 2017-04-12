@@ -6,8 +6,8 @@ EESchema-LIBRARY Version 2.3
 DEF +3V3 #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
 F1 "+3V3" 0 140 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 ALIAS +3.3V
 DRAW
 P 2 0 1 0 -30 50 0 100 N
@@ -22,8 +22,8 @@ ENDDEF
 DEF +5V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
 F1 "+5V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 DRAW
 P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
@@ -88,14 +88,10 @@ ENDDEF
 DEF C C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
 F1 "C" 25 -100 50 H V L CNN
-F2 "" 38 -150 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- C?
- C_????_*
- C_????
- SMD*_c
- Capacitor*
+ C_*
 $ENDFPLIST
 DRAW
 P 2 0 1 20 -80 -30 80 -30 N
@@ -107,16 +103,16 @@ ENDDEF
 #
 # CONN_01X02
 #
-DEF CONN_01X02 P 0 40 Y N 1 F N
-F0 "P" 0 150 50 H V C CNN
+DEF CONN_01X02 J 0 40 Y N 1 F N
+F0 "J" 0 150 50 H V C CNN
 F1 "CONN_01X02" 100 0 50 V V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- Pin_Header_Straight_1X02
- Pin_Header_Angled_1X02
- Socket_Strip_Straight_1X02
- Socket_Strip_Angled_1X02
+ Pin_Header_Straight_1X*
+ Pin_Header_Angled_1X*
+ Socket_Strip_Straight_1X*
+ Socket_Strip_Angled_1X*
 $ENDFPLIST
 DRAW
 S -50 -45 10 -55 0 1 0 N
@@ -129,16 +125,16 @@ ENDDEF
 #
 # CONN_01X04
 #
-DEF CONN_01X04 P 0 40 Y N 1 F N
-F0 "P" 0 250 50 H V C CNN
+DEF CONN_01X04 J 0 40 Y N 1 F N
+F0 "J" 0 250 50 H V C CNN
 F1 "CONN_01X04" 100 0 50 V V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
- Pin_Header_Straight_1X04
- Pin_Header_Angled_1X04
- Socket_Strip_Straight_1X04
- Socket_Strip_Angled_1X04
+ Pin_Header_Straight_1X*
+ Pin_Header_Angled_1X*
+ Socket_Strip_Straight_1X*
+ Socket_Strip_Angled_1X*
 $ENDFPLIST
 DRAW
 S -50 -145 10 -155 0 1 0 N
@@ -177,8 +173,8 @@ ENDDEF
 DEF GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
 F1 "GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
@@ -207,11 +203,13 @@ ENDDEF
 DEF L L 0 40 N N 1 F N
 F0 "L" -50 0 50 V V C CNN
 F1 "L" 75 0 50 V V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
  Choke_*
  *Coil*
+ Inductor_*
+ L_*
 $ENDFPLIST
 DRAW
 A 0 -75 25 -899 899 0 1 0 N 0 -100 0 -50
@@ -228,8 +226,8 @@ ENDDEF
 DEF LED D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
 F1 "LED" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
  LED*
 $ENDFPLIST
@@ -359,11 +357,11 @@ ENDDEF
 DEF R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
 F1 "R" 0 0 50 V V C CNN
-F2 "" -70 0 50 V V C CNN
-F3 "" 0 0 50 H V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
 $FPLIST
  R_*
- Resistor_*
+ R_*
 $ENDFPLIST
 DRAW
 S -40 -100 40 100 0 1 10 N
@@ -435,11 +433,11 @@ X 2 2 300 0 200 L 60 60 0 1 P I
 ENDDRAW
 ENDDEF
 #
-# USB_OTG
+# USB_OTG-RESCUE-tiny-radar
 #
-DEF USB_OTG P 0 40 Y Y 1 F N
+DEF USB_OTG-RESCUE-tiny-radar P 0 40 Y Y 1 F N
 F0 "P" 325 -125 50 H V C CNN
-F1 "USB_OTG" 0 200 50 H V C CNN
+F1 "USB_OTG-RESCUE-tiny-radar" 0 200 50 H V C CNN
 F2 "" -50 -100 50 V V C CNN
 F3 "" -50 -100 50 V V C CNN
 $FPLIST
