@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/wbraun/projects/tiny-radar/phased-array/pcb/phased-array.sch)
-    (date "Wed 05 Apr 2017 05:16:06 PM EDT")
+    (date "Thu 13 Apr 2017 12:53:16 AM EDT")
     (tool "Eeschema 4.0.6-e0-6349~53~ubuntu14.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
