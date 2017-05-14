@@ -44,8 +44,11 @@
 #include "main.h"
 #include "stm32l4xx_hal.h"
 #include "usb_device.h"
+#include "dac_values.h"
+#include "stm32l4xx_it.h"
 
 /* USER CODE BEGIN Includes */
+
 
 /* USER CODE END Includes */
 
@@ -78,11 +81,11 @@ static void MX_ADC1_Init(void);
 static void MX_TIM6_Init(void);
 volatile int x = 0;
 volatile int y = 0;
-volatile uint16_t adc_buffer[1024];
-volatile uint16_t dac_buffer[2048];
+volatile uint16_t dac_buffer[2048] = DAC_BUFF;
 volatile int z = 0;
 volatile int q = 0;
 int counter = 0;
+
 
 
 /* USER CODE BEGIN PFP */
@@ -133,24 +136,24 @@ int main(void)
 
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
 
-  for(counter = 0; counter <1024; counter ++){
-    dac_buffer[counter] = counter*4;
-    dac_buffer[counter+1024] = (1024*4) - counter*4;
+  //wait for the timer to reach zero, to syncronize DMA's
+  MX_USB_DEVICE_Init();
+  while ((&htim6)->Instance->CNT != 0){
+    //wait
   }
-  dac_buffer[1024] = 4092;
-  //HAL_DMA_Start_IT(&hdma_dac_ch2, dac_buffer, DAC1->DHR12R2, 1024);
   HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_2, dac_buffer, 2048, DAC_ALIGN_12B_R);
-  HAL_ADC_Start_DMA(&hadc1, adc_buffer, 1024);
+  HAL_ADC_Start_DMA(&hadc1, adc_buffer, 2048);
 
+  //set AGC DAC
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
-  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 1500);
+  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 300);
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+  
   while (1)
   {
   /* USER CODE END WHILE */
 y = (&htim6)->Instance->CNT;
 x++;
-//HAL_DAC_SetValue(hdma_dac_ch2, )
 
 
   /* USER CODE BEGIN 3 */
@@ -249,7 +252,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.NbrOfConversion = 1;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.NbrOfDiscConversion = 1;
-  hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_T2_TRGO;
+  hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_T6_TRGO;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
   hadc1.Init.DMAContinuousRequests = ENABLE;
   hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;

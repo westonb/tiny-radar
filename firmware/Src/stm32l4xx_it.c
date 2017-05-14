@@ -36,7 +36,7 @@
 #include "stm32l4xx_it.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "serial_format.h"
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -45,6 +45,8 @@ extern DMA_HandleTypeDef hdma_adc1;
 extern DMA_HandleTypeDef hdma_dac_ch2;
 extern int z;
 extern int q;
+uint8_t print_buff[4098];
+volatile uint16_t adc_buffer[2048];
 
 /******************************************************************************/
 /*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
@@ -194,7 +196,12 @@ void DMA1_Channel1_IRQHandler(void)
 {
   /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
   q++;
+  uint8_t * end_of_line;
   /* USER CODE END DMA1_Channel1_IRQn 0 */
+  end_of_line = ascii_encode_12b(adc_buffer, 2048, print_buff);
+  end_of_line[0] = 0x0D; // \r
+  end_of_line[1] = 0x0A; // \n 
+  CDC_Transmit_FS(print_buff, 4098);
   HAL_DMA_IRQHandler(&hdma_adc1);
   /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
 
